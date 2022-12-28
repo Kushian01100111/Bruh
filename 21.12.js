@@ -19,3 +19,22 @@
 // Input: n = 4
 // Output: 3
 // Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
+
+// Input => Number  => Number on that index on the fibonacci sequaence 
+// => index of the fibonacci indicated by the input
+
+function fibonacci(num){
+    //inicated with fibonacci sequeance => [0,1]
+    let fibo = [0,1];
+    // For loop => goes from the 2 index to the index indecated by num
+    for(let i = 2; i <= num; i++){
+    // new indexes that are going to follow fibonacci sequeance 
+        fibo[i] =  fibo[i - 1] + fibo[i - 2]
+    }
+    // return the asked index
+    return fibo[num]
+}
+
+console.log(fibonacci(2), 1)
+console.log(fibonacci(3), 2)
+console.log(fibonacci(5), 5)
